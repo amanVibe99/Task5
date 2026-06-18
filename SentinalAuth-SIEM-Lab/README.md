@@ -3,16 +3,19 @@
 ## 📌 Project Overview
 SentinelAuth is a localized, high-performance Security Information and Event Management (SIEM) pipeline designed to ingest, parse, and analyze real-time Linux authentication telemetry. This project demonstrates a full-loop incident response scenario—moving from baseline monitoring to active brute-force threat detection and automated firewall containment.
 
-## 🏗️ Technical Architecture
-The deployment architecture utilizes a three-tier localized virtual network matrix:
+---
+
+## 🏗️ Technical Architecture & Environment Planning
+The deployment architecture utilizes a three-tier localized virtual network matrix communicating across an internal bridged subnet:
 * **Log Ingestion & Mitigation Engine:** Ubuntu Server hosting optimized microservice containers.
 * **Adversary Emulation Platform:** Kali Linux VM simulating multi-threaded credential-stuffing network attacks.
 * **Analyst Dashboard View:** Managed via a bridged network interface on the host machine web browser.
 
-### 🔄 Telemetry Data Flow Pipeline
+### 🔄 Network Topology & Telemetry Data Flow
 Every operating system event moves through a structured pipeline before rendering on the security control interface:
-
 `Ubuntu Auth Logs (/var/log/auth.log) ──> Filebeat Agent ──> Elasticsearch DB (Port 9200) ──> Kibana Interface (Port 5601)`
+
+![Network Architecture Diagram](assets/00_network_diagram.png)
 
 ---
 
