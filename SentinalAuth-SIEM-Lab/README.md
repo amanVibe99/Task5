@@ -15,7 +15,7 @@ The deployment architecture utilizes a three-tier localized virtual network matr
 Every operating system event moves through a structured pipeline before rendering on the security control interface:
 `Ubuntu Auth Logs (/var/log/auth.log) ──> Filebeat Agent ──> Elasticsearch DB (Port 9200) ──> Kibana Interface (Port 5601)`
 
-![Network Architecture Diagram](assets/0_network diagram.png)
+![Network Architecture Diagram](assets/0_network_diagram.png)
 
 ---
 
