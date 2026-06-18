@@ -15,7 +15,7 @@ The deployment architecture utilizes a three-tier localized virtual network matr
 Every operating system event moves through a structured pipeline before rendering on the security control interface:
 `Ubuntu Auth Logs (/var/log/auth.log) ──> Filebeat Agent ──> Elasticsearch DB (Port 9200) ──> Kibana Interface (Port 5601)`
 
-![Network Architecture Diagram](assets/00_network_diagram.png)
+![Network Architecture Diagram](assets/0_network_diagram.png)
 
 ---
 
@@ -35,19 +35,19 @@ Every operating system event moves through a structured pipeline before renderin
 
 ### 1. Microservices Architecture Deployment
 Open-source configuration blueprint detailing the containerized Elasticsearch and Kibana environment:
-![Docker Setup](assets/01_docker_setup.png)
+![Docker Setup](assets/1_docker_setup.png)
 
 ### 2. SIEM Core Engine Verification
 Centralized monitoring console loading successfully across the internal host network bridge:
-![SIEM Dashboard](assets/02_siem_dashboard.png)
+![SIEM Dashboard](assets/2_siem_dashboard.png)
 
 ### 3. Brute-Force Anomaly Detection
 The specific KQL query capturing the exact signature of the live 48-hit brute-force attack:
-![Attack Detection](assets/03_attack_detection.png)
+![Attack Detection](assets/3_attack_detection.png)
 
 ### 4. Firewall Containment Execution
 Active packet filter status verifying the permanent drop rule applied against the threat actor:
-![Containment Firewall](assets/04_containment_firewall.png)
+![Containment Firewall](assets/4_containment_firewall.png)
 
 ---
 *Developed as part of the Technical Capstone Project portfolio requirement.*
